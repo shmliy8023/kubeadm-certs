@@ -44,7 +44,7 @@ jobs:
               git checkout -b $t $t
               git branch
            
-              sed -i 's#time.Hour \* 24 \* 365#time.Hour * 24 * 365 * 10#g'  cmd/kubeadm/app/constants/constants.go
+              sed -i 's#time.Hour \* 24 \* 365#time.Hour * 24 * 365 * 100#g'  cmd/kubeadm/app/constants/constants.go
               grep -n -R CertificateValidity ./*
               grep -n -R duration365d ./*
            
